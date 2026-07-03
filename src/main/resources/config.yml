@@ -1,0 +1,42 @@
+# ──────────────────────────────────────────────
+# RandomTeleport Configuration
+# ──────────────────────────────────────────────
+
+# Minimum distance from the center point (in blocks)
+min-radius: 500
+
+# Maximum distance from the center point (in blocks)
+max-radius: 2000
+
+# Center point for the teleport radius.
+# Options:
+#   worldspawn  — uses the world's spawn point
+#   x,z         — custom coordinates, e.g. "0,0"
+center: worldspawn
+
+# Delay before teleporting (in seconds). Set to 0 for instant teleport.
+teleport-delay: 5
+
+# Cooldown between teleports (in seconds). Set to 0 for no cooldown.
+cooldown: 60
+
+# Cancel the teleport if the player moves during the delay.
+cancel-on-move: true
+
+# ──────────────────────────────────────────────
+# Economy (requires Vault)
+# ──────────────────────────────────────────────
+economy:
+  enabled: false
+  cost: 100.0
+
+# ──────────────────────────────────────────────
+# Messages (use & for color codes)
+# ──────────────────────────────────────────────
+messages:
+  prefix: "&8[&bRTP&8] &7"
+  teleporting: "&aTeleporting to a random location in &e{seconds}&a seconds. Don't move!"
+  teleported: "&aYou have been teleported to a random location!"
+  cancelled: "&cTeleport cancelled because you moved!"
+  cooldown: "&cPlease wait &e{seconds}&c seconds before using /rtp again."
+  no-safe-location: "&cCould not find a safe location. Please try again."

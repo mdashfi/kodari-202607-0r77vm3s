@@ -1,0 +1,34 @@
+name: RandomTeleport
+version: 1.0.0
+main: com.randomteleport.RandomTeleport
+api-version: 1.13
+author: Kodari
+description: Safely teleport players to random locations in the world
+
+commands:
+  rtp:
+    description: Teleport to a random safe location
+    usage: /<command>
+    aliases: [randomteleport, randtp]
+  rtpreload:
+    description: Reload the RTP configuration
+    usage: /<command>
+    permission: rtp.admin
+
+permissions:
+  rtp.use:
+    description: Allows using /rtp
+    default: true
+  rtp.bypasscooldown:
+    description: Bypass the teleport cooldown
+    default: op
+  rtp.admin:
+    description: Access to admin commands (reload)
+    default: op
+  rtp.*:
+    description: All RandomTeleport permissions
+    default: op
+    children:
+      rtp.use: true
+      rtp.bypasscooldown: true
+      rtp.admin: true
